@@ -12,7 +12,7 @@ var AppView = Backbone.View.extend({
     this.searchView.render();
     this.videoPlayerView = new VideoPlayerView();
     this.videoPlayerView.render();
-    console.log(this.videos);
+  
     
 
   },
