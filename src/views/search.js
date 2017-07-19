@@ -1,9 +1,17 @@
 var SearchView = Backbone.View.extend({
-  
-  el: '.search',
-  initialize: function() {
-    this.render();
+ 
+  events: {
+  	'click button': 'fetchCollection'
   },
+  fetchCollection: function(){
+  	var query = this.$('input').val().trim();
+  	if (query) {
+
+  	  this.collection.search(query);	
+  	}
+  	
+  },
+
 
   render: function() {
     this.$el.html(this.template());

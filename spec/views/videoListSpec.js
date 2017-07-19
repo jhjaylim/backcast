@@ -21,6 +21,7 @@ describe('VideoListView', function() {
   });
 
   it('should re-render when video collection updates', function() {
+   
     collection.trigger('sync');
     expect(view.render).to.have.been.called;
   });
